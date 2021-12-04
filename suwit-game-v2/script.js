@@ -10,85 +10,78 @@
 // <== Declare Variable ==>
 // Image Computer & Player
 const imgComputer = document.getElementById('image-computer');
-const imgPlayer = document.getElementById('image-player');
+const imgPlayer   = document.getElementById('image-player');
 // Rules Suwit Game v.2
-let output;
-const result = document.getElementById('result');
+const result      = document.getElementById('result');
 // Select Player 
-let player;
-const slcStone = document.getElementsByClassName('select-stone')[0];
+const slcStone    = document.getElementsByClassName('select-stone')[0];
 const slcScissors = document.getElementsByClassName('select-scissors')[0];
-const slcPaper = document.getElementsByClassName('select-paper')[0];
+const slcPaper    = document.getElementsByClassName('select-paper')[0];
+
+// <== Declare Function ==>
+// Select Computer
+const getComputer = () => {
+  const computer  = Math.random() * 10;
+  if (computer <= 3.33)                    return 'stone'; // computer <= 3.33
+  if (3.33 < computer && computer <= 6.66) return 'scissors'; // 3.33 < computer <= 6.66
+  else                                     return 'paper'; // 6.66 < computer
+}
+
+// Rules Game
+const getResult = (player,computer) => {
+  if (player == computer)   return 'DRAW !!';
+  if (player == 'stone')    return (computer == 'scissors') ? 'YOU WIN !!' : 'COMPUTER WIN !!';
+  if (player == 'scissors') return (computer == 'paper') ? 'YOU WIN !!' : 'COMPUTER WIN !!';
+  if (player == 'paper')    return (computer == 'stone') ? 'YOU WIN !!' : 'COMPUTER WIN !!';
+}
+
+// Style Color Result Game
+const getStyle = (rules) => {
+  if (rules == 'DRAW !!')         return result.style.color = '#c3ad26';
+  if (rules == 'YOU WIN !!')      return result.style.color = '#0bbedb';
+  if (rules == 'COMPUTER WIN !!') return result.style.color = '#f60000';
+} 
 
 // 1. Stone
 slcStone.addEventListener('click', () => {
-  player = 'stone';
-  console.log('You select stone');
-  imgPlayer.src = 'image/stone.jpg';
-  setTimeout(function() {
-    getResult(player,output);
-    imgComputer.src = `image/${computer}.jpg`;
+  const slcComputer   = getComputer();
+  imgPlayer.src       = 'image/stone.jpg';
+  
+  setTimeout(() => {
+    imgComputer.src   = `image/${slcComputer}.jpg`;
+    result.innerHTML  = getResult('stone',slcComputer)
+    getStyle(getResult('stone',slcComputer));
   }, 1000);
 });
 
 // 2. Scissors
 slcScissors.addEventListener('click', () => {
-  player = 'scissors';
-  console.log('You select scissors');
-  imgPlayer.src = 'image/scissors.jpg';
-  setTimeout(function() {
-    getResult(player,output);
-    imgComputer.src = `image/${computer}.jpg`;
+  const slcComputer   = getComputer();
+  imgPlayer.src       = 'image/scissors.jpg';
+  
+  setTimeout(() => {
+    imgComputer.src   = `image/${slcComputer}.jpg`;
+    result.innerHTML  = getResult('scissors',slcComputer)
+    getStyle(getResult('scissors',slcComputer));
   }, 1000);
 });
 
 // 3. Paper
 slcPaper.addEventListener('click', () => {
-  player = 'paper';
-  console.log('You select paper');
-  imgPlayer.src = 'image/paper.jpg';
-  setTimeout(function() {
-    getResult(player,output);
-    imgComputer.src = `image/${computer}.jpg`;
+  const slcComputer   = getComputer();
+  imgPlayer.src       = 'image/paper.jpg';
+  
+  setTimeout(() => {
+    imgComputer.src   = `image/${slcComputer}.jpg`;
+    result.innerHTML  = getResult('paper',slcComputer)
+    getStyle(getResult('paper',slcComputer));
   }, 1000);
 });
 
-// Select Computer
-let computer = Math.random() * 10;
-const getComputer = () => {
-  if (computer <= 3.33) {
-    computer = 'stone';
-    console.log('Computer select stone');
-  } else if (3.33 < computer && computer <= 6.66) {
-    computer = 'scissors';
-    console.log('Computer select scissors');
-  } else if (6.66 < computer) {
-    computer = 'paper';
-    console.log('Computer select paper');
-  }
-}
-getComputer();
 
-// Get Result Game Suwit
-const getResult = (player,output) => {
-  // Rules
-  if (player == computer) {
-  	output = 'DRAW !!';
-  	result.style.color = '#c3ad26';
-  } else if (player == 'stone') {
-    output = (computer == 'scissors') ? 'YOU WIN !!' : 'COMPUTER WIN !!';
-  } else if (player == 'scissors') {
-    output = (computer == 'paper') ? 'YOU WIN !!' : 'COMPUTER WIN !!';
-  } else if (player == 'paper') {
-    output = (computer == 'stone') ? 'YOU WIN !!' : 'COMPUTER WIN !!';
-  } 
-  result.innerHTML = output;
-  if (output == 'YOU WIN !!') {
-    result.style.color = '#0bbedb';
-  } else if (output == 'COMPUTER WIN !!'){
-    result.style.color = '#f60000';
-  }
-}
+
+
+
 
 
 
