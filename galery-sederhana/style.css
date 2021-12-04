@@ -1,0 +1,184 @@
+/*<---- Import ----> */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,600&display=swap');
+/*<----- Parrent ----->*/
+body {
+	background-color: #ddd;
+	height: 2000px;
+	font: 20px/30px 'Anton';
+}
+.container {
+	width: 800px;
+	background-color: white;
+	margin: auto;
+	padding: 35px;
+	box-shadow: 0 0 7px 3px rgba(0,0,0,.4);
+	border-radius: 10px;
+}
+/*<----- Title -----> */
+.title h1 {
+	font: 130px/120px 'Anton';
+	margin-top: 70px;
+	margin-bottom: 40px;
+	text-align: center;
+	text-shadow: 1px 3px 3px white ;
+}
+.title h2 {
+	font: 60px/50px 'Barlow Condensed';
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 80px;
+	text-shadow: 1px 3px 3px white ;
+}
+/*<----- Gallery ----->*/
+.gallery {
+	height: 280px;
+}
+.gallery h2 {
+	text-align: center;
+	font: 55px/20px 'Anton';
+	letter-spacing: 3px;
+	margin: 35px 0 55px;
+}
+.gallery li {
+	width: 130px;
+	height: 130px;
+	background-color: #383838;
+	overflow: hidden;
+	border: 8px solid #5e5e5e;
+	float: left;
+	position: relative;
+	margin-right: 14px;
+}
+/*  border-radius  */
+.gallery li,
+.gallery li a img, 
+.gallery li a span {
+	border-radius: 50%;
+}
+.gallery li span {
+	width: 130px;
+	height: 130px;
+	display: block;
+	font: 35px/130px 'Barlow Condensed';
+	background-color: rgba(229,229,229,.6);
+	position: absolute;
+	top: 0px;
+	text-align: center;
+	color: #1f0058;
+	opacity: 0;
+	transform: scale(0) rotate(0deg);
+	transition: .25s;
+}
+.gallery li a:hover span {
+	opacity: 1;
+	transform: scale(1) rotate(360deg);
+}
+.kosong {
+	clear: both;
+}
+/* <----- Overlay -----> */
+.overlay {
+	position: fixed;
+	z-index: 9999;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0);
+	opacity: 0;
+	transition: .5s;
+}
+.overlay:target {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	opacity: 1;
+	text-align: center;
+	background-color: rgba(0,0,0,.65);
+}
+/*--- Close ---*/
+.overlay .close {
+	font: 30px/0px 'Anton';
+	color: #f3d8e5;
+	border: 5px solid #fe6565;
+	border-radius: 10px;
+	box-shadow: 0 0 20px 5px rgba(0,0,0,.4);
+	padding: 20px;
+	text-decoration: none;
+	position: absolute;
+	top: 170px;
+	right: 125px;
+}
+.overlay:target .close {
+	animation: slideLeft .6s .5s forwards;
+	opacity: 0;
+}
+/*--- Navigasi ---*/
+.overlay:target .previous img,
+.overlay:target .next img{
+	animation: fade .6s .5s forwards;
+}
+.overlay:target .previous img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+	top: 400px;
+	left: 22px;
+	opacity: 0;
+}
+/*--- Icon Next ---*/
+.overlay:target .next img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+	top: 400px;
+	right: 22px;
+	opacity: 0;
+}
+
+/*--- Image ---*/
+.overlay:target img {
+	animation: zoomIn .8s;
+}
+.overlay img {
+	max-height: 100%;
+	margin: 250px 0;
+	border-radius: 10px;
+	box-shadow: 0 0 16px 7px rgba(0,0,0,.6);
+}
+/*<---- Animasi ---->*/
+@keyframes zoomIn {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1) ;
+		opacity: 1;
+	}
+}
+@keyframes slideLeft {
+	0% {
+		opacity: 0;
+		margin-right: -65px;
+	}
+	100% {
+		opacity: 1;
+		margin-right: 0;
+	}
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

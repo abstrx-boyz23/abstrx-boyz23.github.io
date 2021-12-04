@@ -1,0 +1,20 @@
+html, body { height: 100% }
+body { text-align: center }
+em h1 { background-color: rgba(97,224,170,.5) }
+h1 { text-align: center }
+#btnUbahWarna { margin: 10px auto }
+.ubah-warna {
+  background-color: rgba(236,165,42,.6);
+  color: blue;
+}
+.contoh {
+  background-color: brown;
+}
+.kotak {
+  width: 15px;
+  height: 15px;
+  margin: 10px auto;
+}
+.merah { background-color: red }
+.hijau { background-color: green }
+.biru { background-color: blue }

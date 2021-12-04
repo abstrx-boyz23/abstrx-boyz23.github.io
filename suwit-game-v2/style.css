@@ -1,0 +1,216 @@
+/* Reset CSS (Meyerweb.com) */
+/*http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Clear-Fix */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* SUWIT GAME V.2 */
+.container {
+  width: 800px;
+  margin: 90px auto;
+  border-radius: 70px 10px 70px 10px;
+  border: 20px solid #415057;
+  box-sizing: border-box;
+}
+h1 {
+  font: 75px/150px serif;
+  height: 150px;
+  font-weight: bold;
+  /*margin-bottom: 20px;*/
+  text-align: center;
+  color: rgba(255,255,255,0.65);
+  text-shadow: 4px 4px 0 rgba(0,0,0,.6), -4px -4px 0 rgb(0,0,0,.6);
+  border-radius: 50px 0px 0 0;
+  background-color: blue;
+}
+#result {
+  width: 650px;
+  height: 80px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+  border: 14px solid #22516b;
+  margin: 45px auto;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  font-size: 55px;
+  font-weight: bold;
+}
+/* COMPUTER */
+.computer,
+.player {
+  width: 700px;
+  height: 300px;
+}
+.computer {
+  background-color: orange;
+  border-radius: 0 30px 30px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#image-computer,
+#image-player {
+  width: 210px;
+  height: 210px;
+  border-radius: 30px;
+  border: 8px solid black;
+  box-shadow: 8px 8px 20px black;
+}
+#image-computer {
+  background-color: white;
+}
+.text-computer {
+  float: left;
+}
+.vs {
+  text-align: center;
+  margin: 20px 0;
+}
+/* PLAYER */
+.player {
+  border-radius: 30px 0 0 30px;
+  background-color: salmon;
+  float: right;
+  margin-bottom: 50px;
+}
+.text-player {
+  float: right;
+  margin: 120px 112px;
+}
+#image-player {
+  float: right;
+  margin: 40px 0px 0 0;
+  background-color: white;
+}
+/* Player-Selector */
+.select {
+  border-top: 20px solid #1b303a ;
+  border-radius: 1px;
+  clear: right;
+}
+.select h2 {
+  font-size: 45px;
+  text-align: center;
+  margin: 25px auto 10px;
+}
+.selection-of-player {
+  width: 650px;
+  height: 250px;
+  background-color: rgba(29,202,178,0.819);
+  box-sizing: border-box;
+  margin: 0px auto 50px;
+  clear: right;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 40px;
+}
+.select-stone,
+.select-scissors,
+.select-paper {
+  width: 130px;
+  height: 130px;
+  border-radius: 45px;
+  border: 8px solid rgba(0,0,0,0.799);
+} 
+
+.select-stone:active,
+.select-scissors:active,
+.select-paper:active {
+  transform: scale(0.95);
+  transition: .0000000001s;
+  filter: brightness(50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
