@@ -89,7 +89,6 @@ h1 {
   font: 75px/150px serif;
   height: 150px;
   font-weight: bold;
-  /*margin-bottom: 20px;*/
   text-align: center;
   color: rgba(255,255,255,0.65);
   text-shadow: 4px 4px 0 rgba(0,0,0,.6), -4px -4px 0 rgb(0,0,0,.6);
@@ -171,7 +170,7 @@ h2 {
   text-align: center;
   margin: 25px auto 10px;
 }
-.selection-of-player {
+#selection-of-player {
   width: 650px;
   height: 250px;
   background-color: rgba(29,202,178,0.819);
@@ -199,17 +198,6 @@ h2 {
   transition: .0000000001s;
   filter: brightness(50%);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
