@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="container">
+    
+  </div>
+  
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <!-- Code JavaScript -->
+  <script type="text/javascript" charset="utf-8">
+    $.ajax({
+      url: "https://api.dazelpro.com/mobile-legends/hero/6",
+      dataType : "JSON",
+      type: "GET",
+      success: result => {
+        
+        const exmp = result.hero[0];
+        console.log(exmp);
+        $("#container").append(`
+          <img src="${exmp.hero_avatar}" />
+          <h1>${exmp.hero_name}</h1>
+          <h3>${exmp.hero_role}</h3>
+          <h3>${exmp.hero_specially}</h3>
+        `);
+      }
+    });
+    
+    
+    
+  </script>
+</body>
+</html>
