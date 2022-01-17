@@ -3,7 +3,7 @@ function resultMovie () {
   
   // request 
   $.ajax({
-    url: "http://www.omdbapi.com/",
+    url: "https://www.omdbapi.com/",
     type: "GET",
     dataType: "JSON",
     data: {
