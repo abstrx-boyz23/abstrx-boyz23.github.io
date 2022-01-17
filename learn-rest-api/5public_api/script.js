@@ -52,7 +52,7 @@ $("#search-input").keyup(function (event) {
 // function see detail
 $("#movie-list").on("click",".see-detail", function () {
   $.ajax({
-    url: "http://www.omdbapi.com/",
+    url: "https://www.omdbapi.com/",
     type: "GET",
     dataType: "JSON",
     data: {
