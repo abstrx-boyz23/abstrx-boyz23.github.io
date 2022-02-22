@@ -1,0 +1,238 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Style CSS <!-- --> */
+
+body{
+	width: 1400px;
+	height: 1500px;
+	background-image: url('background.png');
+	font-family: Sans-Serif;
+	/*background-repeat: repeat-y;
+	background-color: salmon;*/
+}
+.top-bar{
+	position: fixed;
+	top: 0;
+	left: 0px;
+	right: 0px;
+	height: 80px;
+	background-color: #80cff9;
+	text-align: center;
+	font: 50px/80px Sans-Serif;
+	z-index: 9999;
+	font-weight: bold;
+	font-variant: small-caps;
+	
+}
+.container{
+	background-color: #ffffff;
+	width: 1200px;
+	margin: 80px auto;
+	position: relative;
+}
+.container a img{
+	width: 145px;
+	height: 145px;
+	border-radius: 70px;
+	position: absolute;
+	top: 1px;
+	right: 20px;
+}
+.container .title{
+	padding: 20px 25px;
+	font-size: 70px;
+	font-weight: bold;
+	font-variant: small-caps;
+	font-family: serif;
+}
+.container .navigasi ol li{
+	padding-bottom: 20px;
+	display: inline-block;
+	
+}
+.container .navigasi ol li .satu{
+	margin-left: 35px;
+	padding-right: 8px;
+}
+.container .navigasi ol li .dua, .tiga, .empat{
+	padding: 0px 8px;
+}
+
+.container .navigasi ol li a{
+	text-decoration: none;
+	color: #175591;
+	
+}
+.container .hero-image{
+	background-image: url('squidword.jpg');
+	height: 650px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 -50px;
+}
+.content .main{
+	width: 600px;
+	padding: 15px 25px;
+	float: left;
+}
+h2{
+	font-size: 50px;
+	font-weight: bold;
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+.content .main .penulis{
+	font-size: 15px;
+	padding-left: 7px;
+	margin-top: 8px;
+}
+.content .main .penulis a{
+	text-decoration: none;
+	color: #175591;
+}
+.content .main .parafgraf, .rating{
+	letter-spacing: 1px;
+	word-spacing: 9px;
+	font: 20px/35px Sans-Serif;
+	text-align: justify;
+	
+}
+
+.content .main .parafgraf .p1{
+	padding-top: 40px;
+}
+	
+.content .main p, .sidebar p, .sidebar .rating{
+	padding-bottom: 40px;
+}
+.content .sidebar{
+	float: right;
+	width: 500px;
+	margin-right: 35px;
+	text-align: justify;
+}
+.content .sidebar h3{
+	font: 35px/80px Sans-Serif;
+	
+}
+.content .sidebar img{
+	width: 90px;
+	height: 90px;
+	margin-right: 20px;
+	float: left;
+	border-radius: 20px;
+}
+
+.content .sidebar p {
+	font: 19px/35px Sans-Serif;
+	letter-spacing: 2px;
+}
+
+
+
+.content .sidebar p a{
+	text-decoration: none;
+	color: #8a0404;
+	padding: 20px;
+	border: 5px solid #2d0bdc;
+	border-radius: 60px;
+	padding-right: 60px;
+}
+.content .sidebar p a img{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 1110px;
+	right: 255px;
+	
+}
+.content .sidebar p a:hover{
+}
+
+
+
+
+.footer{
+	background-color: #000038;
+	padding: 20px;
+}
+.footer .copyright{
+	color: #c5e5ed;
+	font-size: 9px;
+	text-align: center;
+}
+
+
+html{
+	6/\|/\5
+}
+/** Micro ClearFix Hack -->
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
