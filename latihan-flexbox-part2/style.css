@@ -1,0 +1,183 @@
+/*<----- Parents ----->*/
+* {
+	box-sizing: border-box;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Sans-Serif;
+	background-color: #ddd;
+	line-height: 1.65;
+	padding-bottom: 1000px;
+}
+body h1 {
+	width: 850px;
+	font: 85px/90px "Times new roman";
+	font-weight: bold;
+	text-align: center;
+}
+/*<----- Latihan 1 ----->*/
+.container-satu {
+	width: 850px;
+	margin: 70px auto;
+	background-color: white;
+	padding: 20px 10px;
+	box-sizing: border-box;
+	display: flex;
+}
+.container-satu .kolom-utama {
+	flex: 2;
+	order: 2;
+	margin-right: 50px;
+}
+.kolom-utama h2 {
+	font: 40px/55px Sans-Serif;
+	font-weight: bold;
+	margin: -5px 0;
+}
+.container-satu .sidebar-satu {
+	flex: 1;
+	order: 1;
+	margin-left: 20px;
+}
+.container-satu .sidebar-dua {
+	flex: 1;
+	order: 3;
+}
+/*<----- Latihan 2 ----->*/
+.container-dua {
+	width: 800px;
+	margin: -30px 6% 40px;
+	display: inline-block;
+	box-sizing: border-box;
+}
+.layanan {
+	margin: 20px 0;
+	padding: 30px;
+	box-sizing: border-box;
+}
+.layanan.satu { background-color: lightgreen; }
+.layanan.dua { background-color: #97f2ff; }
+.layanan.tiga { background-color: #868dff; }
+/*<----- Latihan 3 ----->*/
+.container-tiga {
+	width: 850px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+/*--- Thumbnail ---*/
+.thumbnail {
+	width: 47%;
+	margin-bottom: 20px;
+}
+.thumbnail img {
+	width: 100%;
+}
+/*<----- Latihan 4 / Card ----->*/
+.container-empat {
+	width: 800px;
+	margin: 50px 20px;
+	display: flex;
+}
+/*--- Card ---*/
+.card {
+	border: 3px solid #82b1bd;
+	border-radius: 15px;
+	background-color: white;
+	overflow: hidden;
+	text-align: center;
+	margin: 10px;
+}
+.card .header {
+	height: 300px;
+	background-color: #28505a;
+	margin-bottom: 20px;
+}
+.card .content{
+	margin-bottom: 15px;
+}
+.card.besar {
+	transform: scale(1.1);
+}
+/*----- latihan 5 -----*/
+.container-lima {
+	width: 600px;
+	height: 600px;
+	border: 5px solid #99c381;
+	border-radius: 20px;
+	margin: 10px 120px;
+	display: flex;
+}
+.kotak {
+	width: 250px;
+	height: 250px;
+	background-color: #063bbd;
+	margin: auto;
+	text-align: center;
+	display: flex;
+}
+.kotak span {
+	color: white;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--- Responsive ---*/
+@media( min-width: 700px ) {
+	/*--- container-dua ---*/
+	.container-dua {
+		margin: -30px 9% 70px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.container-dua .layanan {
+		width: 30%;
+	}
+	/*--- container-tiga ---*/
+	.container-tiga {
+		margin: -20px 7%;
+	}
+	.thumbnail {
+		width: 33%;
+		box-sizing: border-box;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
